@@ -32,10 +32,21 @@ import Translations from './compendium/data/translations.json';
           </tr>
         </thead>
       </table>
+      <aside class="project-credit" aria-label="Project credits">
+        <span class="project-credit-label">Community-hosted fork</span>
+        <span>Original Megami Tensei Fusion Tools by
+          <a href="https://github.com/aqiu384">aqiu384</a>.</span>
+        <a href="https://aqiu384.github.io/megaten-fusion-tool/">Visit the original site ↗</a>
+      </aside>
       @switch (loading) {
         @case (true) { <h4 style="text-align: center;">{{ msgs.NowLoading | translateComp:lang }}</h4> }
         @default     { <router-outlet></router-outlet> }
       }
+      <footer class="project-footer">
+        <p>Based on <a href="https://github.com/aqiu384/megaten-fusion-tool">aqiu384’s original project</a>
+          · <a href="LICENSE.md">Project license</a></p>
+        <p>Unofficial fan tool. Not affiliated with or endorsed by Atlus or SEGA.</p>
+      </footer>
       <div style="text-align: center;">
         <br>
         <a href="https://www.youtube.com/watch?v=b1KfNEPKncQ">

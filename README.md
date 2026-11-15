@@ -2,6 +2,8 @@
 
 Fusion tool framework for Megami Tensei games.
 
+For production builds and Sevalla Static Site Hosting, see [DEPLOYMENT.md](DEPLOYMENT.md).
+
 ## Common Fusion Tool Functionality
 
 * 100% Compendium Table

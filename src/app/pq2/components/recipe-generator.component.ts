@@ -10,7 +10,7 @@ import Translations from  '../../compendium/data/translations.json';
   template: `
     <app-recipe-generator
       [lang]="lang"
-      [maxSkills]="compConfig.maxSkillSlots"
+      [maxSkills]="compConfig.appCssClasses.includes('p5') && compConfig.maxSkillSlots === 10 ? 9 : compConfig.maxSkillSlots"
       [compendium]="fusionDataService.compendium$()"
       [squareChart]="fusionDataService.squareChart$()"
       [recipeConfig]="recipeConfig">
@@ -30,6 +30,7 @@ export class RecipeGeneratorContainerComponent {
     inheritElems: this.compConfig.inheritElems,
     displayElems: translateCompSet(Translations.ElementIcon, this.lang),
     restrictInherits: true,
+    triExclusiveRaces: this.compConfig.hasTripleFusion ? ['Fool', 'Tower', 'Moon', 'Sun', 'Judgement'] : [],
     triFissionCalculator: this.fusionDataService.triFissionCalculator,
     triFusionCalculator: this.fusionDataService.triFusionCalculator,
     defaultDemon: this.compConfig.defaultDemon

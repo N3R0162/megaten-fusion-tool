@@ -11,7 +11,7 @@ import Translations from  '../../compendium/data/translations.json';
   template: `
     <app-recipe-generator
       [lang]="lang"
-      [maxSkills]="compConfig.maxSkillSlots"
+      [maxSkills]="recipeMaxSkills"
       [compendium]="fusionDataService.compendium$()"
       [squareChart]="squareChart$()"
       [recipeConfig]="recipeConfig">
@@ -23,6 +23,8 @@ export class RecipeGeneratorContainerComponent {
   fusionDataService = inject(FusionDataService);
   compConfig = this.fusionDataService.compConfig;
   lang = this.compConfig.lang;
+  recipeMaxSkills = this.compConfig.appCssClasses.some(c => ['ds1', 'dso', 'ds2'].includes(c)) ? 7
+    : this.compConfig.appCssClasses.includes('smt5v') ? 9 : this.compConfig.maxSkillSlots;
   recipeConfig = {
     fissionCalculator: this.fusionDataService.fissionCalculator,
     fusionCalculator: this.fusionDataService.fusionCalculator,
@@ -31,6 +33,7 @@ export class RecipeGeneratorContainerComponent {
     inheritElems: this.compConfig.affinityElems,
     displayElems: translateCompSet(Translations.ElementIcon, this.lang),
     restrictInherits: this.compConfig.appCssClasses.includes('sh2') || this.compConfig.appCssClasses.includes('smt3'),
+    triExclusiveRaces: [],
     triFissionCalculator: null,
     triFusionCalculator: null,
     defaultDemon: this.compConfig.defaultRecipeDemon

@@ -238,3 +238,49 @@ tbody tr.hidden {
   --icon-weapon-sho: url('../assets/images/weapon-sprites.svg#sho');
   --icon-weapon-rif: url('../assets/images/weapon-sprites.svg#rif');
 }
+
+/* Attribution stays visible above the game-specific tools. */
+.project-credit {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  width: min(1080px, 100%);
+  margin: 0.75rem auto 1.25rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid #535353;
+  border-radius: 6px;
+  background: #242424;
+  color: #ededed;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.project-credit-label {
+  padding: 0.15rem 0.6rem;
+  border: 1px solid #777;
+  border-radius: 1rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.project-credit a, .project-footer a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.project-footer {
+  width: min(1080px, 100%);
+  margin: 2rem auto 0;
+  color: #d0d0d0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.project-footer p {
+  margin: 0.25rem 1rem;
+}
