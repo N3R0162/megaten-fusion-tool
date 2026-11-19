@@ -17,7 +17,7 @@ function strToBytes(str: string, len: number): number[] {
 
 const PQ_MSG_BYTES = [].concat(
   strToBytes('aqiu384.github.io', 21),
-  strToBytes('https://youtu.be/b1KfNEPKncQ', 33)
+  Array(33).fill(0) // Unused message field; preserve the QR payload layout.
 );
 
 const P3_NAME = 'kitaro';

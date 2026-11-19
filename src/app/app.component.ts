@@ -47,12 +47,6 @@ import Translations from './compendium/data/translations.json';
           · <a href="LICENSE.md">Project license</a></p>
         <p>Unofficial fan tool. Not affiliated with or endorsed by Atlus or SEGA.</p>
       </footer>
-      <div style="text-align: center;">
-        <br>
-        <a href="https://www.youtube.com/watch?v=b1KfNEPKncQ">
-          https://www.youtube.com/watch?v=b1KfNEPKncQ
-        </a>
-      </div>
     </div>
   `,
   styleUrls: ['./app.component.css'],
